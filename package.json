@@ -1,0 +1,16 @@
+{
+  "name": "react-native-cloudpayments",
+  "version": "1.0.0",
+  "description": "CloudPayments SDK for react-native",
+  "main": "index.js",
+  "keywords": [
+    "react-native",
+    "native",
+    "cloudpayments"
+  ],
+  "author": "gazaret <polu-hin@mail.ru>",
+  "license": "MIT",
+  "peerDependencies": {
+    "react-native": "*"
+  }
+}
