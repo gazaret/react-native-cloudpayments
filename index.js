@@ -3,41 +3,28 @@ import { NativeModules } from 'react-native';
 const RNCloudPaymentsModule = NativeModules.RNCloudPayments;
 
 export default class RNCloudPayments {
-  static isValidNumber(cardNumber, cardExp, cardCvv) {
-    return new Promise((resolve, reject) => {
-      RNCloudPaymentsModule.isValidNumber(
-        cardNumber,
-        cardExp,
-        cardCvv,
-        error => reject(createError(error)),
-        numberStatus => resolve(numberStatus),
-      )
-    });
+  static async isValidNumber(cardNumber, cardExp, cardCvv) {
+    try {
+      return await RNCloudPaymentsModule.isValidNumber(cardNumber, cardExp, cardCvv);
+    } catch(error) {
+      return createError(error);
+    }
   }
 
-  static getType(cardNumber, cardExp, cardCvv) {
-    return new Promise((resolve, reject) => {
-      RNCloudPaymentsModule.getType(
-        cardNumber,
-        cardExp,
-        cardCvv,
-        error => reject(createError(error)),
-        type => resolve(type),
-      )
-    });
+  static async getType(cardNumber, cardExp, cardCvv) {
+    try {
+      return await RNCloudPaymentsModule.getType(cardNumber, cardExp, cardCvv);
+    } catch(error) {
+      return createError(error);
+    }
   }
 
-  static createCryptogram(cardNumber, cardExp, cardCvv, publicId) {
-    return new Promise((resolve, reject) => {
-      RNCloudPaymentsModule.createCryptogram(
-        cardNumber,
-        cardExp,
-        cardCvv,
-        publicId,
-        error => reject(createError(error)),
-        cryptogram => resolve(cryptogram),
-      )
-    });
+  static async createCryptogram(cardNumber, cardExp, cardCvv, publicId) {
+    try {
+      return await RNCloudPaymentsModule.createCryptogram(cardNumber, cardExp, cardCvv, publicId);
+    } catch(error) {
+      return createError(error);
+    }
   }
 }
 

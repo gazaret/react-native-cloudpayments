@@ -1,6 +1,6 @@
 package com.rncloudpayments;
 
-import com.facebook.react.bridge.Callback;
+import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
@@ -19,42 +19,42 @@ public class CloudPayments extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public void isValidNumber(String cardNumber, String cardExp, String cardCvv, Callback reactErrorCallback, Callback reactSuccessCallback) {
+  public void isValidNumber(String cardNumber, String cardExp, String cardCvv, Promise promise) {
     try {
       CPCard card = CPCardFactory.create(cardNumber, cardExp, cardCvv);
 
       boolean numberStatus = card.isValidNumber();
 
-      reactSuccessCallback.invoke(numberStatus);
+      promise.resolve(numberStatus);
     } catch (Exception e) {
-      reactErrorCallback.invoke(e.getMessage());
+      promise.reject(e.getMessage());
     }
   }
 
   @ReactMethod
-  public void getType(String cardNumber, String cardExp, String cardCvv, Callback reactErrorCallback, Callback reactSuccessCallback) {
+  public void getType(String cardNumber, String cardExp, String cardCvv, Promise promise) {
     try {
       CPCard card = CPCardFactory.create(cardNumber, cardExp, cardCvv);
 
       String cardType = card.getType();
 
-      reactSuccessCallback.invoke(cardType);
+      promise.resolve(cardType);
     } catch (Exception e) {
-      reactErrorCallback.invoke(e.getMessage());
+      promise.reject(e.getMessage());
     }
   }
 
   @ReactMethod
-  public void createCryptogram(String cardNumber, String cardExp, String cardCvv, String publicId, Callback reactErrorCallback, Callback reactSuccessCallback) {
+  public void createCryptogram(String cardNumber, String cardExp, String cardCvv, String publicId, Promise promise) {
     try {
       CPCard card = CPCardFactory.create(cardNumber, cardExp, cardCvv);
 
       String cryptoprogram = card.cardCryptogram(publicId);
 
-      reactSuccessCallback.invoke(cryptoprogram);
+      promise.resolve(cryptoprogram);
     } catch (Exception e) {
       e.printStackTrace();
-      reactErrorCallback.invoke(e.getMessage());
+      promise.reject(e.getMessage());
     }
   }
 }
