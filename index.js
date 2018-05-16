@@ -3,7 +3,7 @@ import { NativeModules } from 'react-native';
 const RNCloudPaymentsModule = NativeModules.RNCloudPayments;
 
 export default class RNCloudPayments {
-  static async isValidNumber(cardNumber, cardExp, cardCvv) {
+  static async isValidCard(cardNumber, cardExp, cardCvv) {
     try {
       return await RNCloudPaymentsModule.isValidNumber(cardNumber, cardExp, cardCvv);
     } catch(error) {
