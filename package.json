@@ -3,12 +3,24 @@
   "version": "1.0.0",
   "description": "CloudPayments SDK for react-native",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gazaret/react-native-cloudpayments.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gazaret/react-native-cloudpayments/issues"
+  },
+  "homepage": "https://github.com/gazaret/react-native-cloudpayments",
   "keywords": [
     "react-native",
     "native",
     "cloudpayments"
   ],
-  "author": "gazaret <polu-hin@mail.ru>",
+  "author": {
+    "name": "gazaret",
+    "email": "polu-hin@mail.ru",
+    "url": "https://github.com/gazaret"
+  },
   "license": "MIT",
   "peerDependencies": {
     "react-native": "*"
