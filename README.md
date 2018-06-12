@@ -31,7 +31,7 @@ __Arguments__
 
 __Examples__
 ```js
-import RNCloudPayment from 'react-native-cloudpayment';
+import RNCloudPayment from 'react-native-cloudpayments';
 
 const demoCard = {
   number: '5105105105105100',
@@ -64,7 +64,7 @@ __Arguments__
 
 __Examples__
 ```js
-import RNCloudPayment from 'react-native-cloudpayment';
+import RNCloudPayment from 'react-native-cloudpayments';
 
 const demoCard = {
   number: '5105105105105100',
@@ -90,7 +90,7 @@ __Arguments__
 
 __Examples__
 ```js
-import RNCloudPayment from 'react-native-cloudpayment';
+import RNCloudPayment from 'react-native-cloudpayments';
 
 const demoCard = {
   number: '5105105105105100',
