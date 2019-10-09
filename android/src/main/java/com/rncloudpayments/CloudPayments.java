@@ -5,8 +5,7 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 
-import ru.cloudpayments.cpcard.CPCard;
-import ru.cloudpayments.cpcard.CPCardFactory;
+import ru.cloudpayments.sdk.cp_card.CPCard;
 
 public class CloudPayments extends ReactContextBaseJavaModule {
   public CloudPayments(ReactApplicationContext reactContext) {
@@ -21,7 +20,7 @@ public class CloudPayments extends ReactContextBaseJavaModule {
   @ReactMethod
   public void isValidNumber(String cardNumber, String cardExp, String cardCvv, Promise promise) {
     try {
-      CPCard card = CPCardFactory.create(cardNumber, cardExp, cardCvv);
+      CPCard card = new CPCard(cardNumber, cardExp, cardCvv);
 
       boolean numberStatus = card.isValidNumber();
 
@@ -34,7 +33,7 @@ public class CloudPayments extends ReactContextBaseJavaModule {
   @ReactMethod
   public void getType(String cardNumber, String cardExp, String cardCvv, Promise promise) {
     try {
-      CPCard card = CPCardFactory.create(cardNumber, cardExp, cardCvv);
+      CPCard card = new CPCard(cardNumber, cardExp, cardCvv);
 
       String cardType = card.getType();
 
@@ -47,7 +46,7 @@ public class CloudPayments extends ReactContextBaseJavaModule {
   @ReactMethod
   public void createCryptogram(String cardNumber, String cardExp, String cardCvv, String publicId, Promise promise) {
     try {
-      CPCard card = CPCardFactory.create(cardNumber, cardExp, cardCvv);
+      CPCard card = new CPCard(cardNumber, cardExp, cardCvv);
 
       String cryptoprogram = card.cardCryptogram(publicId);
 

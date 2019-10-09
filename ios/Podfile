@@ -1,0 +1,5 @@
+platform :ios, '9.0'
+
+target 'RNCloudPayments' do
+  pod 'SDK-iOS', :git =>  "https://github.com/cloudpayments/SDK-iOS", :branch => "master"
+end

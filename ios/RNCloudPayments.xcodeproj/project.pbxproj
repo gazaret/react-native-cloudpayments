@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		832ED3842353BCCF00DD9CD7 /* libSDK-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832ED3802353BBFA00DD9CD7 /* libSDK-iOS.a */; };
+		832ED3852353BCD900DD9CD7 /* libPods-RNCloudPayments.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E44CD6BBFC69ABC84E40A50E /* libPods-RNCloudPayments.a */; };
 		954FC90C20AADA700017B273 /* RNCloudPayments.m in Sources */ = {isa = PBXBuildFile; fileRef = 954FC90B20AADA700017B273 /* RNCloudPayments.m */; };
-		954FC9F920AC08E60017B273 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 954FC9F620AC08E60017B273 /* Card.m */; };
-		954FC9FA20AC08E60017B273 /* NSDataENBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 954FC9F720AC08E60017B273 /* NSDataENBase64.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,13 +25,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4A9227F3F4103A17B98F6CF7 /* Pods-RNCloudPayments.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNCloudPayments.debug.xcconfig"; path = "Target Support Files/Pods-RNCloudPayments/Pods-RNCloudPayments.debug.xcconfig"; sourceTree = "<group>"; };
+		832ED3802353BBFA00DD9CD7 /* libSDK-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libSDK-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		954FC90720AADA700017B273 /* libRNCloudPayments.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNCloudPayments.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		954FC90A20AADA700017B273 /* RNCloudPayments.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNCloudPayments.h; sourceTree = "<group>"; };
 		954FC90B20AADA700017B273 /* RNCloudPayments.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNCloudPayments.m; sourceTree = "<group>"; };
-		954FC9F520AC08E60017B273 /* NSDataENBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDataENBase64.h; sourceTree = "<group>"; };
-		954FC9F620AC08E60017B273 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
-		954FC9F720AC08E60017B273 /* NSDataENBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDataENBase64.m; sourceTree = "<group>"; };
-		954FC9F820AC08E60017B273 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		D70A7B21DB46DF827DF80266 /* Pods-RNCloudPayments.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNCloudPayments.release.xcconfig"; path = "Target Support Files/Pods-RNCloudPayments/Pods-RNCloudPayments.release.xcconfig"; sourceTree = "<group>"; };
+		E44CD6BBFC69ABC84E40A50E /* libPods-RNCloudPayments.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNCloudPayments.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				832ED3842353BCCF00DD9CD7 /* libSDK-iOS.a in Frameworks */,
+				832ED3852353BCD900DD9CD7 /* libPods-RNCloudPayments.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,10 +50,11 @@
 		954FC8FE20AADA700017B273 = {
 			isa = PBXGroup;
 			children = (
-				954FC9F420AC08D70017B273 /* SDK */,
 				954FC90B20AADA700017B273 /* RNCloudPayments.m */,
 				954FC90A20AADA700017B273 /* RNCloudPayments.h */,
 				954FC90820AADA700017B273 /* Products */,
+				F483E23C355CEE4742FDDA58 /* Pods */,
+				FF3E6351D2F336F29B5FA27A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,15 +66,22 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		954FC9F420AC08D70017B273 /* SDK */ = {
+		F483E23C355CEE4742FDDA58 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				954FC9F820AC08E60017B273 /* Card.h */,
-				954FC9F620AC08E60017B273 /* Card.m */,
-				954FC9F520AC08E60017B273 /* NSDataENBase64.h */,
-				954FC9F720AC08E60017B273 /* NSDataENBase64.m */,
+				4A9227F3F4103A17B98F6CF7 /* Pods-RNCloudPayments.debug.xcconfig */,
+				D70A7B21DB46DF827DF80266 /* Pods-RNCloudPayments.release.xcconfig */,
 			);
-			path = SDK;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FF3E6351D2F336F29B5FA27A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				832ED3802353BBFA00DD9CD7 /* libSDK-iOS.a */,
+				E44CD6BBFC69ABC84E40A50E /* libPods-RNCloudPayments.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -81,6 +91,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 954FC91020AADA700017B273 /* Build configuration list for PBXNativeTarget "RNCloudPayments" */;
 			buildPhases = (
+				4BD5AAD650054E33765896F6 /* [CP] Check Pods Manifest.lock */,
 				954FC90320AADA700017B273 /* Sources */,
 				954FC90420AADA700017B273 /* Frameworks */,
 				95E3C63020ADAE9D0098BA8E /* CopyFiles */,
@@ -124,14 +135,37 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4BD5AAD650054E33765896F6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RNCloudPayments-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		954FC90320AADA700017B273 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				954FC90C20AADA700017B273 /* RNCloudPayments.m in Sources */,
-				954FC9F920AC08E60017B273 /* Card.m in Sources */,
-				954FC9FA20AC08E60017B273 /* NSDataENBase64.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +284,7 @@
 		};
 		954FC91120AADA700017B273 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A9227F3F4103A17B98F6CF7 /* Pods-RNCloudPayments.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				OTHER_LDFLAGS = "-ObjC";
@@ -261,6 +296,7 @@
 		};
 		954FC91220AADA700017B273 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D70A7B21DB46DF827DF80266 /* Pods-RNCloudPayments.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				OTHER_LDFLAGS = "-ObjC";

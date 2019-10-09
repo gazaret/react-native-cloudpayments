@@ -18,8 +18,8 @@ android {
   defaultConfig {
     minSdkVersion 19
     targetSdkVersion 27
-    versionCode 1
-    versionName "1.0"
+    versionCode 110
+    versionName "1.1.0"
   }
   lintOptions {
     abortOnError false
@@ -32,5 +32,5 @@ repositories {
 
 dependencies {
   implementation "com.facebook.react:react-native:+"
-  implementation files('src/main/libs/CloudPayments.aar')
+  implementation 'ru.cloudpayments.android:sdk:1.0.3'
 }
