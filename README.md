@@ -3,6 +3,7 @@
 [React Native](http://facebook.github.io/react-native/) library for accepting payments with [CloudPayments](https://cloudpayments.ru) SDK
 
 # Install
+### Step 1:
 Download package:
 ```shell
 npm install --save react-native-cloudpayments
@@ -13,10 +14,21 @@ or
 ```shell
 yarn add react-native-cloudpayments
 ```
-
+### Step 2:
 Link dependencies:
 ```shell
 react-native link react-native-cloudpayments
+```
+### Step 3:
+Add in your Podfile next line:
+```shell
+pod 'SDK-iOS', :git =>  "https://github.com/cloudpayments/SDK-iOS", :branch => "master"
+pod 'RNCloudPayments', :path => '../node_modules/react-native-cloudpayments'
+```
+### Step 3:
+Install Pods in ios directory:
+```shell
+cd ios && pod install
 ```
 
 # Methods
